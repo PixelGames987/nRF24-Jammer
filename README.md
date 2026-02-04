@@ -9,6 +9,31 @@ Many nRF24 modules will work better for jamming when selecting only a few channe
 This jammer uses around 1W while active. With a small 150 mAh battery expect around 30min of use: 150mAh / 1W ≈ 30min
 <br><br>
 
+## Parts List:
+<table align="center">
+<thead>
+<tr>
+<th>Item</th>
+<th>Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESP32 WROOM-32 Dev Board</td>
+<td>1</td>
+</tr>
+<tr>
+<td>nRF24L01+ PA+LNA Module</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Jumper Cables</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<br><br>
+
 ## Wiring:
 <table align="center">
 <thead>
