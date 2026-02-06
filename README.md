@@ -1,12 +1,15 @@
 <div align="center">
-
+  
 # nRF24 Jammer
 <img src="/image.jpg" alt="Jammer image" width="350">
 <br><br>
-
-Many nRF24 modules will work better for jamming when selecting only a few channels in a non-sequantial order rather than selecting all of them. This is why this code only jams 12 channels out of 79.
+Many nRF24 modules will work better for jamming when selecting only a few channels in a non-sequential order rather than selecting all of them. This is why this code only jams 12 channels out of 79.
 <br><br>
-This jammer uses around 1W while active. With a small 150 mAh battery expect around 30min of use: 150mAh / 1W ≈ 30min
+This jammer is also effective against wifi networks on channels 1-13.
+<br><br>
+The jammer uses around 1W while active. With a small 150 mAh battery expect around 30min of use: 150mAh / 1W ≈ 30min
+<br><br>
+This is a relatively low-power device. Do not expect good jamming performance at distances greater than 10 meters.
 <br><br>
 
 ## Parts List:
@@ -86,5 +89,4 @@ This jammer uses around 1W while active. With a small 150 mAh battery expect aro
 </tr>
 </tbody>
 </table>
-
 </div>
