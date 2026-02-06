@@ -113,4 +113,7 @@ On the top board selection press "Select other board and port...", search for "E
 Press the "Upload" button to start flashing
 <br>
 
+## Toubleshooting
+If you encounter a timeout error while downloading the ESP32 board library, refer to [this issue](https://forum.arduino.cc/t/downloading-esp32-3-3-5-fails/1420739)
+
 </div>
