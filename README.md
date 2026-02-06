@@ -91,4 +91,26 @@ This is a relatively low-power device. Do not expect good jamming performance at
 </tr>
 </tbody>
 </table>
+
+## Flashing Tutorial
+### 1. Install Arduino IDE
+Follow the instructions on the [Arduino Website](https://www.arduino.cc/en/software)
+<br>
+### 2. Add ESP32 Board Support and libraries
+Go into the Boards Manager in the left side panel, search for "esp32" (the one by Espressif systems, not Arduino) and click install
+
+Go into the Library Manager in same panel, search for "RF24" and click install
+<br>
+### 3. Compile and flash
+Paste the code from the [nrf_jammer.ino](/nrf_jammer.ino) file into the Arduino IDE project
+
+Hold down the "BOOT" button on the esp32 and plug it into the pc
+
+(If you are on linux you need to run `sudo chmod 777 /dev/ttyUSB0`)
+
+On the top board selection press "Select other board and port...", search for "ESP32 Dev Module", select the available port and press OK
+
+Press the "Upload" button to start flashing
+<br>
+
 </div>
