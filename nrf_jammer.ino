@@ -19,6 +19,8 @@ byte* current_channels = ble_adv_priority;
 uint8_t channel_count = sizeof(ble_adv_priority);
 volatile uint8_t current_channel_index = 0;
 
+unsigned long lastBlinkTime = 0;
+
 void setup() {
   Serial.begin(115200);
   pinMode(LED_PIN, OUTPUT);
@@ -67,4 +69,10 @@ void loop() {
   SPI.transfer(0x25);
   SPI.transfer(current_channels[current_channel_index]);
   digitalWrite(CSN_PIN, HIGH);
+
+  unsigned long currentTime = millis();
+  if (currentTime - lastBlinkTime >= 25) {
+    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+    lastBlinkTime = currentTime;
+  }
 }
