@@ -7,6 +7,8 @@ Many nRF24 modules will work better for jamming when selecting only a few channe
 <br><br>
 This jammer is also effective against WiFi networks on channels 1-13.
 <br><br>
+To maximize spectrum coverage you should hold the jammer by the antenna or though a non-conductive surface.
+<br><br>
 The jammer uses around 1W while active. With a small 150 mAh battery expect around 30min of use: 150mAh / 1W ≈ 30min
 <br><br>
 This is a relatively low-power device. Do not expect good jamming performance at distances greater than 10 meters.
