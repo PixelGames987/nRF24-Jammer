@@ -7,8 +7,8 @@ RF24 radio(CE_PIN, CSN_PIN);
 // channels 37, 38, 39 for advertising + data channels 0-36 (mapped to RF channels 2-80)
 byte ble_channels[] = {2,  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
                        22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41};
-// BLE advertising priority channels
-byte specific_channels[] = {37, 38, 39, 1, 2, 3, 5, 25, 27, 50, 70, 80};
+// Best channels for max spectrum coverage
+byte specific_channels[] = {37, 38, 39, 1, 2, 3, 4, 5, 6, 25, 27, 50, 75, 80};
 // Full Bluetooth Classic
 byte bluetooth_channels[] = {2,  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 13, 14, 15, 16, 17,
                              18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
@@ -22,6 +22,7 @@ volatile uint8_t current_channel_index = 0;
 unsigned long lastBlinkTime = 0;
 
 void setup() {
+  delay(1000); // It's there for a reason
   Serial.begin(115200);
   pinMode(LED_PIN, OUTPUT);
   pinMode(CSN_PIN, OUTPUT);
