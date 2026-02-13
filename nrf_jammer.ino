@@ -28,7 +28,7 @@ void setup() {
   digitalWrite(LED_PIN, LOW);
   digitalWrite(CSN_PIN, HIGH);
   SPI.begin();
-  SPI.setFrequency(5000000); // Use 5MHz for better stability and performance
+  SPI.setFrequency(1000000); // Use 1MHz for better stability and performance
   SPI.setDataMode(SPI_MODE0);
   SPI.setBitOrder(MSBFIRST);
   if (!radio.begin()) {
