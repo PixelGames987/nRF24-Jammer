@@ -58,7 +58,7 @@ void setup() {
     Serial.print(" ");
   }
   Serial.println("Starting hopping...");
-  delay(100);
+  delay(500); // Wait for the module to initialize
   digitalWrite(LED_PIN, HIGH);
 }
 
