@@ -22,13 +22,14 @@ volatile uint8_t current_channel_index = 0;
 unsigned long lastBlinkTime = 0;
 
 void setup() {
+  delay(1000); // Wait for the module get stable 3.3v voltage
   Serial.begin(115200);
   pinMode(LED_PIN, OUTPUT);
   pinMode(CSN_PIN, OUTPUT);
   digitalWrite(LED_PIN, LOW);
   digitalWrite(CSN_PIN, HIGH);
   SPI.begin();
-  SPI.setFrequency(1000000); // Use 5MHz for better stability and performance
+  SPI.setFrequency(1000000); // Use 1MHz for better stability and performance
   SPI.setDataMode(SPI_MODE0);
   SPI.setBitOrder(MSBFIRST);
   if (!radio.begin()) {
@@ -58,7 +59,7 @@ void setup() {
     Serial.print(" ");
   }
   Serial.println("Starting hopping...");
-  delay(500); // Wait for the module to initialize
+  delay(500); // Wait for the module settle on the carrier frequency before hopping
   digitalWrite(LED_PIN, HIGH);
 }
 
