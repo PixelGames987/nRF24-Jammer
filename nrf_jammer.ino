@@ -8,7 +8,7 @@ RF24 radio(CE_PIN, CSN_PIN);
 byte ble_channels[] = {2,  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
                        22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41};
 // Best channels for max spectrum coverage
-byte specific_channels[] = {37, 38, 39, 1, 2, 3, 4, 5, 6, 25, 27, 50, 75, 80, 90};
+byte specific_channels[] = {40, 8, 7, 6, 5, 4, 3, 2, 1, 10, 50, 60, 70, 80};
 // Full Bluetooth Classic
 byte bluetooth_channels[] = {2,  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 13, 14, 15, 16, 17,
                              18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
@@ -16,7 +16,7 @@ byte bluetooth_channels[] = {2,  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 13, 14,
                              50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65,
                              66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80};
 byte* current_channels = specific_channels;
-uint8_t channel_count = sizeof(specific_channels);
+uint8_t channel_count = sizeof(specific_channels) / sizeof(specific_channels[0]);
 volatile uint8_t current_channel_index = 0;
 
 unsigned long lastBlinkTime = 0;
