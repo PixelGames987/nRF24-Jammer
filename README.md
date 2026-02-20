@@ -3,7 +3,7 @@
 # nRF24 Jammer
 <img src="/image.jpg" alt="Jammer image" width="350">
 <br><br>
-Many nRF24 modules will work better for jamming when selecting only a few channels in a non-sequential order rather than selecting all of them. This is why this code only jams 15 channels out of 79.
+Many nRF24 modules will work better for jamming when selecting only a few channels in a non-sequential order rather than selecting all of them. This is why this code only jams 14 channels out of 79.
 <br><br>
 This jammer is also effective against WiFi networks on channels 1-13.
 <br><br>
