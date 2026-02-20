@@ -51,16 +51,17 @@ void setup() {
   }
   radio.setAutoAck(false);
   radio.setRetries(0, 0);
-  // Start constant carrier
-  radio.startConstCarrier(RF24_PA_MAX, 40); // Channel 40 beacuse it's the middle on the spectrum
+  
   Serial.print("Channels: ");
   for(int i = 0; i < channel_count; i++) {
     Serial.print(current_channels[i]);
     Serial.print(" ");
   }
   Serial.println("Starting hopping...");
-  delay(500); // Wait for the module settle on the carrier frequency before hopping
   digitalWrite(LED_PIN, HIGH);
+
+  // Start constant carrier
+  radio.startConstCarrier(RF24_PA_MAX, 40);
 }
 
 void loop() {
