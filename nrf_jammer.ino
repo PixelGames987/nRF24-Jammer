@@ -52,7 +52,7 @@ void setup() {
   radio.setAutoAck(false);
   radio.setRetries(0, 0);
   // Start constant carrier
-  radio.startConstCarrier(RF24_PA_MAX, current_channels[0]);
+  radio.startConstCarrier(RF24_PA_MAX, 40); // Channel 40 beacuse it's the middle on the spectrum
   Serial.print("Channels: ");
   for(int i = 0; i < channel_count; i++) {
     Serial.print(current_channels[i]);
